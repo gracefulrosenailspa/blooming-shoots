@@ -1,1 +1,254 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blooming Shoots Education Center | CBE School</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --light-green: #90EE90;
+            --sky-blue: #87CEEB;
+            --deep-green: #2e7d32;
+            --dark-text: #2c3e50;
+            --white: #ffffff;
+            --light-gray: #f4f7f6;
+            --whatsapp-green: #25D366;
+            --map-red: #ea4335;
+        }
+
+        * { box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark-text);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-area b { color: var(--deep-green); font-size: 1.4rem; }
+
+        .nav-links { list-style: none; display: flex; gap: 20px; margin: 0; align-items: center; }
+        .nav-links li a { 
+            text-decoration: none; 
+            color: var(--dark-text); 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .nav-links li a:hover { color: var(--deep-green); }
+
+        .call-icon-top {
+            background: var(--deep-green);
+            color: white !important;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: var(--whatsapp-green);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); color: white; }
+
+        /* Sections */
+        section { padding: 80px 10%; }
+        .hero {
+            background: linear-gradient(rgba(135, 206, 235, 0.7), rgba(144, 238, 144, 0.7)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3.2rem; margin: 0; color: #1a472a; }
+        .hero p { font-size: 1.4rem; margin: 15px 0; font-weight: bold; }
+
+        .btn {
+            background: var(--deep-green);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        .btn-map { background: var(--map-red); margin-top: 10px; }
+
+        h2 { text-align: center; font-size: 2.2rem; color: var(--deep-green); margin-bottom: 40px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { 
+            background: var(--white); 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--sky-blue);
+        }
+
+        /* Footer */
+        footer { background: #1a1a1a; color: white; padding: 60px 10% 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        footer h3 { color: var(--light-green); margin-bottom: 20px; }
+        footer a { color: var(--sky-blue); text-decoration: none; }
+        .address-link { color: white; display: flex; align-items: flex-start; gap: 10px; }
+        .address-link i { color: var(--map-red); margin-top: 5px; }
+
+        @media (max-width: 768px) {
+            .nav-links li:not(.call-li) { display: none; }
+            .hero h1 { font-size: 2.3rem; }
+            section { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/254724558506" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav>
+        <div class="logo-area"><b>BLOOMING SHOOTS</b></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li class="call-li"><a href="tel:+254724558506" class="call-icon-top"><i class="fas fa-phone"></i></a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <h1>Blooming Shoots Education Center</h1>
+        <p>Nurturing Minds, Building Character, Inspiring Futures.</p>
+        <div>
+            <a href="#admissions" class="btn">Explore Admissions</a>
+            <a href="https://maps.app.goo.gl/HV6FMRcS29K7RhNB9" target="_blank" class="btn btn-map">
+                <i class="fas fa-location-dot"></i> Find Us
+            </a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" style="background: var(--light-gray);">
+        <h2>About Us</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p>Welcome to <strong>Blooming Shoots Education Center</strong>. We are a Christian-based institution dedicated to providing a nurturing environment for children from <strong>Playgroup to Grade 4</strong>.</p>
+            <p>Our curriculum is fully aligned with the <strong>CBE (Competency-Based Education)</strong> framework, ensuring our learners develop through a hands-on, practical approach.</p>
+        </div>
+    </section>
+
+    <!-- School Programs Section -->
+    <section id="programs">
+        <h2>School Programs & Services</h2>
+        <div class="grid">
+            <div class="card">
+                <h3><i class="fas fa-book-open"></i> Academics</h3>
+                <p>Playgroup, PP1, PP2, and Grade 1 to 4 following the modern CBE curriculum.</p>
+            </div>
+            <div class="card" style="border-top-color: var(--light-green);">
+                <h3><i class="fas fa-child"></i> Daycare</h3>
+                <p>Safe and stimulating daycare services for our youngest learners with expert caregivers.</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-bus"></i> Transport</h3>
+                <p>Reliable and safe school transport services covering Kasarani, Mwiki, and surrounding areas.</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-swimmer"></i> Extracurricular</h3>
+                <p>Music, Chess, Swimming, French, Coding, and a dedicated Feeding Program.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" style="background: var(--light-gray);">
+        <div style="background: var(--sky-blue); padding: 50px; border-radius: 20px; text-align: center;">
+            <h2>Admissions</h2>
+            <p style="font-size: 1.2rem;">Currently enrolling for the upcoming term! Visit us to secure your child's spot.</p>
+            <a href="https://wa.me/254724558506" class="btn" style="background: var(--whatsapp-green); color: white;">
+                <i class="fab fa-whatsapp"></i> Chat via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact/Footer Section -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div>
+                <h3>Find Us</h3>
+                <a href="https://maps.app.goo.gl/HV6FMRcS29K7RhNB9" target="_blank" class="address-link">
+                    <i class="fas fa-location-dot"></i>
+                    <span>
+                        Kasarani-Mwiki Road<br>
+                        At Equity Bank Stage (Second right turn)<br>
+                        Nairobi, Kenya<br>
+                        <strong>Open in Google Maps</strong>
+                    </span>
+                </a>
+            </div>
+            <div>
+                <h3>Connect With Us</h3>
+                <p><i class="fas fa-phone"></i> Phone: <a href="tel:+254724558506">+254 724 558 506</a></p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@bloomingshootseducationcentre.co.ke">info@bloomingshootseducationcentre.co.ke</a></p>
+            </div>
+            <div>
+                <h3>School Hours</h3>
+                <p>Mon - Fri: 7:00 AM - 5:00 PM</p>
+                <p>Sat: 8:00 AM - 12:00 PM</p>
+            </div>
+        </div>
+        <div style="text-align: center; border-top: 1px solid #444; margin-top: 40px; padding-top: 20px;">
+            <p>&copy; 2026 Blooming Shoots Education Center.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
