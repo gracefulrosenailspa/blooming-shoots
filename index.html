@@ -57,7 +57,6 @@
 
         /* Hero */
         .hero {
-            /* Added a darker semi-transparent overlay to make text pop */
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg');
             background-size: cover; background-position: center;
             height: 80vh; display: flex; flex-direction: column;
@@ -68,16 +67,16 @@
         
         .hero h1 { 
             font-size: 2.5rem; 
-            color: #ffffff; /* Changed to White */
+            color: #ffffff;
             margin: 10px 0; 
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Added shadow for visibility */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .hero p { 
             font-size: 1.2rem; 
-            color: #ffffff; /* Changed to White */
+            color: #ffffff;
             font-weight: 600; 
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Added shadow for visibility */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
         .btn { background: var(--deep-green); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; margin-top: 20px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
@@ -185,7 +184,14 @@
             <div class="icon-box">
                 <i class="fas fa-book-reader"></i>
                 <h3>CBC/CBE Curriculum</h3>
-                <p>Fully compliant with the Competency Based Education system, focusing on 21st-century skills and practical learning for Playgroup to Grade 5.</p>
+                <!-- UPDATED TO GRADE 6 -->
+                <p>Fully compliant with the Competency Based Education system, focusing on 21st-century skills and practical learning for Playgroup to Grade 6.</p>
+            </div>
+            <!-- ADDED COMPUTER LESSONS CARD -->
+            <div class="icon-box" style="border-top-color: var(--deep-green);">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Computer Lessons</h3>
+                <p>Equipping pupils with essential digital literacy, coding concepts, and computer skills for the future.</p>
             </div>
             <div class="icon-box" style="border-top-color: var(--sky-blue);">
                 <i class="fas fa-chess"></i>
@@ -292,6 +298,11 @@
                 <img src="classroom.jpg" alt="Classroom" style="width:100%; height:200px; object-fit:cover;">
                 <div style="padding:15px; text-align:center;">Interactive Classrooms</div>
             </div>
+            <!-- ADDED COMPUTER LESSONS TO GALLERY -->
+            <div style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <img src="computer.jpg" alt="Computer Lessons" style="width:100%; height:200px; object-fit:cover;">
+                <div style="padding:15px; text-align:center;">Computer Lessons</div>
+            </div>
             <div style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                 <img src="swimming.jpg" alt="Swimming" style="width:100%; height:200px; object-fit:cover;">
                 <div style="padding:15px; text-align:center;">Swimming Sessions</div>
@@ -341,5 +352,4 @@
     </script>
 
 </body>
-                        </html>
-                        
+</html>
